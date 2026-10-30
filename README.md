@@ -1,14 +1,18 @@
-# Craft Kernel 0.1 (Craft Release 1)
+# Craft Kernel 0.2 (Craft Release 2)
 
 - note this README was written with ai because Craft drained me xx - bitetheapple
 
-The first Craft Kernel (0.1, the text-mode kernel from CraftOS 1) with HTTP networking added: a
+The first Craft Kernel (the text-mode kernel from CraftOS 1) with HTTP networking added: a
 driver for the RTL8139 network card, a small IPv4 stack, and a plain HTTP client, used from its
 little shell. There's no HTML, CSS, JavaScript or HTTPS. The OS for this release is next to it
 in `../CraftOS`.
 
 The Craft Kernel is a hobby x86 (32-bit) kernel written from scratch in C with a little assembly.
 It boots through Multiboot, so QEMU can load it directly without a disk image.
+
+![Booting up](screenies/screenshot-boot.png)
+
+![Testing the keyboard: shift, caps lock and backspace](screenies/screenshot-keyboard.png)
 
 ## What it does
 

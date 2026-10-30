@@ -7,8 +7,8 @@
 #include <string.h>
 
 #define KERNEL_NAME    "Craft Kernel"
-#define KERNEL_VERSION "0.1"
-#define RELEASE        "Craft Release 1"
+#define KERNEL_VERSION "0.2"
+#define RELEASE        "Craft Release 2"
 
 #define MULTIBOOT_BOOTLOADER_MAGIC 0x2BADB002
 
