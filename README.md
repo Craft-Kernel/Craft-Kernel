@@ -37,6 +37,22 @@ The kernel runs one thing at a time: there's no scheduler yet. So when the netwo
 answer, the CPU halts until the next timer tick, and the network card's interrupt still handles
 frames as they arrive.
 
+## AI Contribution (Bug Fix)
+
+Bug fixes made by an AI, the kernel's share of the ones in Release 2's CraftOS. Every one is
+marked in the code with a comment starting `AI Contribution (Bug Fix)`, so they're easy to find
+with a search.
+
+- **Interrupts off for too long**: a download no longer copies megabytes around with
+  interrupts off (TCP now uses one fixed 64 KiB buffer and tells the server how much room is
+  left), and the network card gives up on a stuck send after about 2 ms instead of 100 ms
+  (`tcp.c`, `rtl8139.c`)
+- **Interrupt stacks**: answering a packet no longer borrows 3 KiB of whatever stack the
+  interrupt lands on (`net.c`, `tcp.c`)
+- **TCP** acknowledged data it had thrown away, so downloads could come out with holes
+- **Networking**: packets with a broken IP header, and stale handlers left on port 0
+- **Heap**: more checks against corrupted or bogus blocks
+
 ## Building
 
 One-time setup, on Ubuntu (or WSL Ubuntu):
