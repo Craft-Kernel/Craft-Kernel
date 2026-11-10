@@ -109,3 +109,7 @@ AI was used in the following:
 - commenting - im lazy
 - README writing - im also lazy
 
+## Craft Achievements
+
+- @macbookneohype - ran CraftOS on an ARM Chromebook (ChromeOS).
+
